@@ -1,0 +1,30 @@
+
+/home/ianertson/workspace/liblist/src/include/list.h,222
+#define FJB_LIST_HFJB_LIST_H2,19
+#define LOOP(LOOP5,59
+typedef struct LIST_STRUCTLIST_STRUCT13,670
+  void** items;items15,699
+  size_t size;size16,715
+  size_t item_size;item_size17,730
+} list_T;list_T18,750
+
+/home/ianertson/workspace/liblist/src/list.c,1238
+#define MAX(MAX4,47
+#define MIN(MIN6,80
+list_T* init_list(size_t item_size)init_list8,113
+void list_push(list_T* list, void* item)list_push18,294
+void list_push_at(list_T* list, void* item, void* ptr)list_push_at30,544
+void list_push_safe(list_T* list, void* item)list_push_safe57,1076
+void list_push_safe_at(list_T* list, void* item, void* ptr)list_push_safe_at63,1186
+void list_shift_left(list_T* list, int index)list_shift_left72,1353
+void list_shift_right(list_T* list, int index)list_shift_right78,1492
+void list_remove(list_T* list, void* element, void (*free_method)(void* item))list_remove86,1684
+void list_prefix(list_T* list, void* item)list_prefix113,2315
+int list_indexof_str(list_T* list, char* item)list_indexof_str131,2662
+unsigned int list_contains_str(list_T* list, char* item)list_contains_str144,2896
+unsigned int ptr_in_list(list_T* list, void* ptr)ptr_in_list157,3133
+list_T* list_filter(list_T* list, unsigned int (*filter_method)(void* item))list_filter173,3357
+list_T* list_merge(list_T* a, list_T* b)list_merge188,3667
+list_T* list_copy(list_T* a)list_copy205,4044
+void list_clear(list_T* list)list_clear214,4206
+void list_free_shallow(list_T* list)list_free_shallow226,4370
