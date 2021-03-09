@@ -50,4 +50,6 @@ void list_clear(list_T *list);
 
 void list_free_shallow(list_T *list);
 
+void *list_pop(list_T *list);
+
 #endif

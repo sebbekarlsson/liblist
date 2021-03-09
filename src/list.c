@@ -214,3 +214,25 @@ void list_free_shallow(list_T *list) {
   list_clear(list);
   free(list);
 }
+
+void *list_pop(list_T *list) {
+  if (!list->size)
+    return 0;
+
+  void *ptr = list->items[list->size - 1];
+
+  if (!ptr)
+    return 0;
+
+  list_shift_left(list, list->size -
+                            1); /* First shift the elements, then reallocate */
+  void *tmp = realloc(list->items, (list->size - 1) * list->item_size);
+  if (tmp == NULL && list->size > 1) {
+    /* No memory available */
+    exit(EXIT_FAILURE);
+  }
+  list->size = list->size - 1;
+  list->items = tmp;
+
+  return ptr;
+}
