@@ -1,3 +1,0 @@
-/home/ianertson/workspace/liblist/build/CMakeFiles/rebuild_cache.dir
-/home/ianertson/workspace/liblist/build/CMakeFiles/list.dir
-/home/ianertson/workspace/liblist/build/CMakeFiles/edit_cache.dir

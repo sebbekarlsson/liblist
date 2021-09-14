@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC -shared -Wl,-soname,liblist.so -o liblist.so CMakeFiles/list.dir/src/list.c.o 
